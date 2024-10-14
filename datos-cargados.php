@@ -137,9 +137,9 @@
             if ($conexion->connect_error) {
                 die("Error de conexión: " . $conexion->connect_error);
             }
-            $resultado2 = $conexion->query("SELECT materia_curricular FROM materia");
+            $resultado2 = $conexion->query("SELECT materia_curricular,  Numero_Materia  FROM materia");
             while ($row2 = $resultado2->fetch_assoc()) {
-                echo "<option value='" . $row2['materia_curricular'] . "'>" . $row2['materia_curricular'] . "</option>";
+                echo "<option value='" . $row2['materia_curricular'] . "'>". "Nombre de la materia: " . $row2['materia_curricular'] .  "Numero de la materia :".$row2['Numero_Materia']. "</option>";
             }
         ?>
     </select>
