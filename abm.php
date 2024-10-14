@@ -184,17 +184,47 @@
                 padding: 2rem;
             }
         }
+        .button-group {
+        display: flex;
+        justify-content: center; /* Centra los botones */
+        gap: 1rem; /* Añade espacio entre ellos */
+        margin-top: 1.5rem; /* Ajusta el margen superior */
+    }
+
+    .button-group button {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 0.75rem 1.5rem; /* Ajusta el tamaño del botón */
+        border: none;
+        border-radius: var(--border-radius);
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: var(--transition);
+        text-transform: uppercase;
+    }
+
+    .button-group button:hover {
+        background-color: var(--secondary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .button-group button:active {
+        transform: translateY(-1px);
+    }
     </style>
 </head>
 <body>
     <nav class="navbar">
         <ul class="nav-links">
-            <li><a href="abm-materia.php">Asignar una materia</a></li>
+            <li><a href="abm.php">Agregar docente</a></li>
             <li><a href="borrar.php">Borrar docente</a></li>
             <li><a href="actualizar.php">Actualizar docente</a></li>
+            <li>!</li>
+            <li><a href="abm-materia.php">Agregar una materia</a></li>
             <li><a href="borrar-materia.php">Eliminar materia</a></li>
             <li><a href="actualizar-materia.php">Actualizar materia</a></li>
-            <li><a href="pdf-abm.php">Imprimir datos</a></li>
         </ul>
     </nav>
     <div class="container">
@@ -230,10 +260,10 @@
             
             <input type="submit" value="Registrar">
         </form>
+        <div class="button-group">
+    <a href="pdf-abm.php"><button type="button">Imprimir Docentes</button></a>
+    <a href="datos-cargados.php"><button type="button">Datos Cargados</button></a>
+</div>
     </div>
-
-    <?php
-    include('base-de-datos.php');
-    ?>
 </body>
 </html>
