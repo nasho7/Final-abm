@@ -146,14 +146,14 @@
 </head>
 <body>      
     <form class="container" action="delete-materia.php" method="post">
-        <h1> Eliminar Materia</h1>
+    <div class="form-title">¡Elimine una materia!</div>
         <input type="hidden" name="accion" value="modificacion">
         <div class="form-group">
             <label for="materia">Ingrese el nombre de la materia que quiera eliminar</label>
             <input type="text" id="materia" name="materia" required>
         </div>
         <div class="form-group">
-            <label for="numero">Ingrese el número de la materia</label>
+            <label for="numero">Ingrese el número de la materia: </label>
             <input type="text" id="numero" name="numero" required>
         </div>
         <input type="submit" value="Enviar">

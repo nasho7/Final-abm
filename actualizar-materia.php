@@ -146,7 +146,7 @@
 </head>
 <body>      
 <form class="container"action="update-materia.php" method="post">
-<h1>Actualiza una materia</h1>
+<div class="form-title">¡Elimine un docente!</div>
 <input type="hidden" name="accion" value="modificacion">
 <label for="nombre_editado">Materia que desea modificar: </label>
 <input type="text" id="nombre_editar" name="materia_editar" required>

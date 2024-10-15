@@ -143,11 +143,28 @@
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
+        .form-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .form-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 0.5rem auto 0;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Agregar Materia</h1>
+    <div class="form-title">¡Agrege una Materia!</div>
         <form action="abm-materia-sql.php" method="post">
             <input type="hidden" name="accion" value="alta">
             
