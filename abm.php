@@ -232,7 +232,7 @@
             <input type="hidden" name="accion" value="alta">
             <input type="hidden" name="id_docente" value="id_docentes">
             
-            <div class="form-title">Registro</div>
+            <div class="form-title">¡Agrege un docente!</div>
             
             <div class="form-group">
                 <input type="text" id="nombre" name="nombre" required placeholder=" ">
