@@ -219,7 +219,6 @@
     <nav class="navbar">
         <ul class="nav-links">
             <li><a href="tabla-docentes.php">Datos Cargados</a></li>
-
         </ul>
     </nav>
     <div class="container">
