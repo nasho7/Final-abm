@@ -59,5 +59,11 @@ ORDER BY M.materia_curricular, D.apellido_docente");
         ?>
 
     </table>
+    <a href="abm.php">Volver al formulario</a>
+    <a href="borrar.php">Elimine un docente</a>
+    <a href="actualizar.php">Actualice un docente</a>
+    <a href="abm-materia.php">Agrege una materia</a>
+    <a href="actualizar-materia.php">Actualice una materia</a>
+    <a href="borrar-materia.php">Borre una materia</a>
 </body>
 </html>

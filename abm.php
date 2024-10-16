@@ -256,7 +256,6 @@
         </form>
         <div class="button-group">
     <a href="pdf-abm.php"><button type="button">Imprimir Docentes</button></a>
-    <a href="datos-cargados.php"><button type="button">Datos Cargados</button></a>
 </div>
     </div>
 </body>
