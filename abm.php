@@ -218,13 +218,8 @@
 <body>
     <nav class="navbar">
         <ul class="nav-links">
-            <li><a href="abm.php">Agregar docente</a></li>
-            <li><a href="borrar.php">Borrar docente</a></li>
-            <li><a href="actualizar.php">Actualizar docente</a></li>
-            <li>!</li>
-            <li><a href="abm-materia.php">Agregar una materia</a></li>
-            <li><a href="borrar-materia.php">Eliminar materia</a></li>
-            <li><a href="actualizar-materia.php">Actualizar materia</a></li>
+            <li><a href="tabla-docentes.php">Datos Cargados</a></li>
+
         </ul>
     </nav>
     <div class="container">
