@@ -83,15 +83,14 @@
             <th>Apellido</th>
             <th>Dirección</th>
             <th>DNI</th>
+            <th>Situación</th>
             <th>Materia</th>
-            <th>Situacións</th>
             <th>N° Materia</th>
         </tr>
 
         <?php
         require('conexión.php');
 
-        // Corregir la consulta SQL, asegurando que las tablas estén correctamente unidas por id_docentes
         $resultado = $conexion->query("SELECT M.materia_curricular, M.Numero_Materia, D.DNI, D.id_docentes, D.nombre_docente, D.apellido_docente, D.dirección, D.Situación
         FROM docentes D
         JOIN materia M ON D.id_docentes = M.id_docentes
