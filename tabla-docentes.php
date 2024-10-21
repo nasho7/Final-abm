@@ -91,10 +91,12 @@
         <?php
         require('conexión.php');
 
-        $resultado = $conexion->query("SELECT M.materia_curricular, M.Numero_Materia, D.DNI, D.id_docentes, D.nombre_docente, D.apellido_docente, D.dirección, D.Situación
-        FROM docentes D
-        JOIN materia M ON D.id_docentes = M.id_docentes
-        ORDER BY D.apellido_docente ASC");
+        $resultado = $conexion->query("SELECT D.DNI, D.id_docentes, D.nombre_docente, D.apellido_docente, D.dirección, D.Situación, M.materia_curricular, M.Numero_Materia 
+        FROM docentes D 
+        LEFT JOIN materia M ON D.id_docentes = M.id_docentes 
+        ORDER BY D.nombre_docente ASC");
+        
+        
 
         if ($resultado->num_rows > 0) {
             while($fila = $resultado->fetch_assoc()) {
@@ -104,14 +106,14 @@
                 echo "<td>" . htmlspecialchars($fila['dirección']) . "</td>";
                 echo "<td>" . htmlspecialchars($fila['DNI']) . "</td>";
                 echo "<td>" . htmlspecialchars($fila['Situación']) . "</td>";
-                echo "<td>" . htmlspecialchars($fila['materia_curricular']) . "</td>";
-                echo "<td>" . htmlspecialchars($fila['Numero_Materia']) . "</td>";
+                echo "<td>" . htmlspecialchars($fila['materia_curricular'] ?? 'Sin asignar') . "</td>";
+                echo "<td>" . htmlspecialchars($fila['Numero_Materia'] ?? 'N/A') . "</td>";
                 echo "</tr>";
             }
         } else {
-            echo "<tr><td colspan='5'>No se encontraron resultados</td></tr>";
+            echo "<tr><td colspan='7'>No se encontraron resultados</td></tr>";
         }
-        ?>
+    ?>
     </table>
 
     <div class="link-container">
