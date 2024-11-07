@@ -36,7 +36,7 @@
 </head>
 <body>
     <?php if (isset($mensaje)) echo $mensaje; ?>
-    <a href="abm.php">Volver al formulario</a><br>
+    <a href="tabla-docentes.php">Volver al formulario</a><br>
 </body>
 </html>
 <?php
